@@ -7,3 +7,28 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 In this milestone, I have implemented code which creates a list of words assigned to a variable called word_list. 
 
 I have also added functionality for a user to input a letter of their choosing, and validation to check that only a single, alphabetical character has been provided by the user. 
+
+## Milestone 3
+In this milestone, I have refactored the code from Milestone 2 which asked for an input and validated it into a function, ask_for_input. 
+
+```
+def ask_for_input():
+    while True:
+        guess = input("What letter would you like to guess?")
+        if len(guess) == 1 and guess.isalpha():
+            break
+        else:
+            print("Invalid letter. Please, enter a single alphabetical character.")
+    check_guess(guess)
+```
+
+This code also makes use of a new function, check_guess. This function checks the guessed character against the letters in the randomly-chosen word, and determines whether it is a correct or incorrect guess. 
+
+``` 
+def check_guess(guess):
+    guess = guess.lower()
+    if guess in word:
+        print(f"Good guess! {guess} is in the word.")
+    else:
+        print(f"Sorry, {guess} is not in the word. Try again.")
+```
