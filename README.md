@@ -36,3 +36,7 @@ def check_guess(guess):
 In this milestone, I created a class to manage the Hangman game, redefining the check_guess and ask_for_input functions as methods in the class.
 
 The class can now keep track of letters already guessed in a list, the location of correctly guessed letters in the word, and the number of remaining lives, and updates these as correct and incorrect guesses are made. 
+
+## Milestone 5
+In this milestone, I created a function to run and adjudicate a game of hangman. The function will loop, asking for a new letter until your life count is 0, or you have guessed every letter correctly. 
+
