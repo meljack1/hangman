@@ -32,3 +32,7 @@ def check_guess(guess):
     else:
         print(f"Sorry, {guess} is not in the word. Try again.")
 ```
+## Milestone 4
+In this milestone, I created a class to manage the Hangman game, redefining the check_guess and ask_for_input functions as methods in the class.
+
+The class can now keep track of letters already guessed in a list, the location of correctly guessed letters in the word, and the number of remaining lives, and updates these as correct and incorrect guesses are made. 
