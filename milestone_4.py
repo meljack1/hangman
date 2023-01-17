@@ -1,6 +1,14 @@
 import random
 word_list = ["peach", "strawberry", "raspberry", "pear", "tangerine"]
-word = random.choice(word_list)
+
+class Hangman():
+    def __init__(self, word_list, num_lives=5):
+        self.word_list = word_list
+        self.word = random.choice(self.word_list)
+        self.num_lives = num_lives
+        self.list_of_guesses = []
+        self.num_letters = len(set([c for c in self.word]))
+        self.word_guessed = [c if c in self.list_of_guesses else "_" for c in self.word]
 
 def ask_for_input():
     while True:
@@ -17,5 +25,3 @@ def check_guess(guess):
         print(f"Good guess! {guess} is in the word.")
     else:
         print(f"Sorry, {guess} is not in the word. Try again.")
-
-ask_for_input()
