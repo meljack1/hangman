@@ -1,6 +1,5 @@
 import random
 word_list = ["peach", "strawberry", "raspberry", "pear", "tangerine"]
-num_lives = 5
 
 class Hangman():
     def __init__(self, word_list, num_lives=5):
@@ -35,6 +34,7 @@ class Hangman():
                 break
 
 def play_game(word_list):
+    num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
         if game.num_lives == 0:
@@ -46,4 +46,4 @@ def play_game(word_list):
             print("Congratulations. You won the game!")
             break
 
-play_game(word_list)
+play_game(["banana"])
