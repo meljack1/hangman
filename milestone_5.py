@@ -42,7 +42,7 @@ def play_game(word_list):
             break
         elif game.num_letters > 0:
             game.ask_for_input()
-        else:
+        elif game.num_lives != 0 and not (game.num_letters > 0):
             print("Congratulations. You won the game!")
             break
 
